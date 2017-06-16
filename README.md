@@ -7,6 +7,7 @@ There are several python packages that need your help.
 #### Register python project
 
 `python setup.py register`
+`python setup.py register -r pypitest`
 
 ### 1: Accrue consensus for release
 
@@ -82,8 +83,14 @@ release is a bell that cannot be unrung.
 ##### Push to PyPi
 
 ```
+# Upload to PyPi test repository
+python setup.py sdist upload -r pypitest
+```
+Observe new relese in testpypi.
+
+```
 # Upload to PyPi
-python setup.py build bdist_egg upload
+python setup.py sdist upload
 ```
 Observe new release in pypi.
 
